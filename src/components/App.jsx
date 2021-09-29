@@ -6,6 +6,8 @@ function App() {
     <>
       <Layout>
         <h1>This is the Dashboard App</h1>
+        <h2>This is the next heading</h2>
+        <h3>This is the last heading</h3>
       </Layout>
     </>
   );
