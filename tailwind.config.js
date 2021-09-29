@@ -13,11 +13,16 @@ module.exports = {
       green: colors.emerald,
       cyan: colors.cyan,
       blue: colors.sky,
+      darkBlue: colors.blue,
       purple: colors.purple,
       fuchsia: colors.fuchsia,
       yellow: colors.amber,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        main: ["Archivo", "sans-serif"],
+      },
+    },
   },
   variants: {
     extend: {},
