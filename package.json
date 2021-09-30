@@ -12,7 +12,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run format && npm run lint && npm run test"
+      "pre-commit": "npm format && npm lint && npm test"
     }
   },
   "author": "mthree",
