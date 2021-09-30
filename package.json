@@ -9,6 +9,11 @@
     "dev": "parcel serve ./src/index.html",
     "build": "parcel build ./src/index.html"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run format && npm run lint && npm run test"
+    }
+  },
   "author": "mthree",
   "license": "ISC",
   "dependencies": {
@@ -34,6 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
     "jest": "^27.2.1",
     "msw": "^0.35.0",
     "parcel": "^2.0.0-rc.0",
