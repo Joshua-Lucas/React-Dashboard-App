@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a contact list tutorial for mthree's Introduction to React Course",
   "scripts": {
+    "prepare": "husky install",
     "test": "jest",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
