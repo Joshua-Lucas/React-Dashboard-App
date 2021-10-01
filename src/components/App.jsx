@@ -1,10 +1,16 @@
 import "./App.css";
 import Layout from "./layout/Layout";
+import Header from "./layout/Header";
+import { UserProvider } from "../context/UserContext";
 
 function App() {
   return (
     <>
-      <Layout>{/* This is where all your components will go */}</Layout>
+      <UserProvider>
+        <Layout>
+          <Header />
+        </Layout>
+      </UserProvider>
     </>
   );
 }
