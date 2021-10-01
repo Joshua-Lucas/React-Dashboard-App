@@ -1,12 +1,19 @@
-import { ResponsiveContainer, AreaChart, Tooltip, XAxis, Area } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  Tooltip,
+  ResponsiveContainer,
+  YAxis,
+} from "recharts";
 
-function AreaGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
+function BarGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
   return (
     <section
-      className={`flex flex-col w-full h-full rounded-2xl shadow-xl py-2 mt-8  ${columnsSpan}`}
+      className={`flex flex-col w-full h-4/5 rounded-2xl shadow-xl py-2 mt-8 ${columnsSpan}`}
     >
       {/*  BEGINNING OF HEADING */}
-      <div className="flex justify-around pt-6">
+      <div className="flex justify-around mb-4 ">
         {/* Total Values */}
         <div>
           <h2 className="capitalize">{totalValue}</h2>
@@ -40,45 +47,31 @@ function AreaGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
       </div>
       {/*  END OF HEADING */}
       {/* BEGINNING OF CHART */}
+
       <ResponsiveContainer width="100%" height="75%">
-        <AreaChart data={data} margin={{ top: 10 }}>
-          <defs>
-            <linearGradient id="colorLy" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#86198F" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#86198F" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorYtd" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#22D3EE" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#22D3EE" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <XAxis
-            dataKey="time"
-            padding={{ left: -20, right: -20 }}
-            interval={0}
-          />
+        <BarChart data={data} margin={{ top: 10 }}>
+          <XAxis dataKey="time" interval={0} />
+          <YAxis />
           <Tooltip />
-          <Area
+          <Bar
             name="LY"
-            type="monotone"
             dataKey="ly"
-            stroke="#86198F"
-            fillOpacity={1}
-            fill="url(#colorLy)"
+            fill="#86198F"
+            radius={[20, 20, 0, 0]}
+            barSize={15}
           />
-          <Area
+          <Bar
             name="YTD"
-            type="monotone"
             dataKey="ytd"
-            stroke="#22D3EE"
-            fillOpacity={1}
-            fill="url(#colorYtd)"
+            fill="#22D3EE"
+            radius={[20, 20, 0, 0]}
+            barSize={15}
           />
-        </AreaChart>
+        </BarChart>
       </ResponsiveContainer>
-      {/*  END OF Chart */}
+      {/*  END OF HEADING */}
     </section>
   );
 }
 
-export default AreaGraph;
+export default BarGraph;

@@ -3,7 +3,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 function PieGraph({ data, colors, label, categoryToggle, columnsSpan }) {
   return (
     <div
-      className={`flex flex-col w-full h-full rounded-2xl shadow-xl py-2 mt-8 ${columnsSpan}`}
+      className={`flex flex-col w-full h-4/5 rounded-2xl shadow-xl py-2 mt-8 ${columnsSpan}`}
     >
       <div className="flex justify-around mb-4">
         <h2 className="capitalize">{label}</h2>
