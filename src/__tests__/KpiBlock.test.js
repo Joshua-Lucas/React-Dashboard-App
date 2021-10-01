@@ -3,7 +3,7 @@
  */
 import { expect, test } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-import KpiBlock from "../components/KpiBlock";
+import KpiBlock from "../components/base/KpiBlock";
 
 test("displays correct color of value to user when greater than target value", async () => {
   //   ARRANGE
