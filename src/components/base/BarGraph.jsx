@@ -49,7 +49,7 @@ function BarGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
       {/* BEGINNING OF CHART */}
 
       <ResponsiveContainer width="100%" height="75%">
-        <BarChart data={data} margin={{ top: 10 }}>
+        <BarChart data={data} margin={{ top: 10, right: 10 }}>
           <XAxis dataKey="time" interval={0} />
           <YAxis />
           <Tooltip />
