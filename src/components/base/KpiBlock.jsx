@@ -1,5 +1,10 @@
 function KpiBlock({ svgComponent, title, time, value, targetValue = 0 }) {
-  let numberValue = parseInt(value.replace(/[^0-9]/g, ""));
+  var numberValue;
+  if (typeof value === "string") {
+    numberValue = parseInt(value.replace(/[^0-9]/g, ""));
+  } else {
+    numberValue = value;
+  }
   return (
     <div className=" rounded-lg flex flex-col justify-center items-center shadow-xl py-4">
       <div className="flex">

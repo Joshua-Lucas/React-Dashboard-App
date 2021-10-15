@@ -10,10 +10,10 @@ import {
 function BarGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
   return (
     <section
-      className={`flex flex-col w-full h-4/5 rounded-2xl shadow-xl py-2 mt-8 ${columnsSpan}`}
+      className={`flex flex-col w-full h-full rounded-2xl shadow-xl py-2  ${columnsSpan}`}
     >
       {/*  BEGINNING OF HEADING */}
-      <div className="flex justify-around mb-4 ">
+      <div className="flex justify-around mb-4 pt-4">
         {/* Total Values */}
         <div>
           <h2 className="capitalize">{totalValue}</h2>
@@ -29,7 +29,7 @@ function BarGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
             >
               <circle cx="50" cy="50" r="50" />
             </svg>
-            <p className="capitalize text-cyan-400">this year</p>
+            <p className="capitalize text-cyan-400 text-xs">this year</p>
           </div>
           <div className="flex items-center space-x-2">
             <svg
@@ -39,7 +39,7 @@ function BarGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
             >
               <circle cx="50" cy="50" r="50" />
             </svg>
-            <p className="capitalize text-fuchsia-800">last year</p>
+            <p className="capitalize text-fuchsia-800 text-xs">last year</p>
           </div>
         </div>
         {/* Toggle or null if there is none */}
