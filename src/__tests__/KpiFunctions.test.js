@@ -1,9 +1,6 @@
 import { test, expect } from "@jest/globals";
-import {
-  ConversionRate,
-  getYtdValue,
-  formatMoneyValue,
-} from "../utils/functions/KpiFunctions";
+import { ConversionRate, getYtdValue } from "../utils/functions/KpiFunctions";
+import { formatMoneyValue } from "../utils/functions/formattingFunctions";
 
 test("Conversion Rate will calculate correctly", () => {
   let interactions = 1000;
