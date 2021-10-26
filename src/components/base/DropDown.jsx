@@ -3,15 +3,14 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 
 function DropDown({ list, parentStateSelect, setParentStateSelect }) {
-  console.log(list[0]);
   const [selfStateSelected, setSelfStateSelected] = useState(list[0]);
 
-  // COnditional set the selected value, allow this component to hold state on it's own or receive it from its parent element
+  // Conditional set the selected value, allow this component to hold state on it's own or receive it from its parent element
   const selected =
     parentStateSelect == null ? selfStateSelected : parentStateSelect;
   const setSelected =
     setParentStateSelect == null ? setSelfStateSelected : setParentStateSelect;
-  console.log(selected, setSelected);
+
   return (
     <div className=" w-26 z-100">
       <Listbox value={selected} onChange={setSelected}>

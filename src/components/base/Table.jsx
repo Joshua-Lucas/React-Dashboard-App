@@ -10,7 +10,7 @@ export default function Table({
   setDropDownState,
 }) {
   return (
-    <div
+    <section
       className={`w-full ${gridLayout} shadow-2xl rounded-lg overflow-y-auto h-full`}
     >
       {console.log(tableData)}
@@ -74,6 +74,6 @@ export default function Table({
           })}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 }

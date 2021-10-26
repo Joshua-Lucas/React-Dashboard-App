@@ -2,7 +2,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 function PieGraph({ data, colors, label, categoryToggle, columnsSpan }) {
   return (
-    <div
+    <section
       className={`flex flex-col w-full rounded-2xl shadow-xl py-2 mt-8 ${columnsSpan}`}
     >
       <div className="flex justify-around mb-4">
@@ -35,7 +35,7 @@ function PieGraph({ data, colors, label, categoryToggle, columnsSpan }) {
           <Tooltip />
         </PieChart>
       </ResponsiveContainer>
-    </div>
+    </section>
   );
 }
 
